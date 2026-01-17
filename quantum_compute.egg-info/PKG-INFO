@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: quantum-compute
+Version: 0.1.0
+Summary: Foundational Quantum Computing Library for Opendev Labs
+Author: Opendev Labs
+Requires-Python: >=3.8
+Requires-Dist: pennylane>=0.30.0
+Requires-Dist: numpy
+Requires-Dist: torch
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
