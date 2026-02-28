@@ -1,0 +1,32 @@
+// Quantum-Compute Sovereign Manifest (QBET Syntax)
+// Manifest ID: compute-core-2026
+// Governed by opendev-labs // 2037 Ready
+
+manifest "quantum-compute" {
+  provider: "opendev-labs"
+  tier: "raw-energy-layer"
+  version: "1.0.0"
+
+  runtime "qir-conductor" {
+    engine: "pennylane/qiskit"
+    backend: "default.qubit"
+    wires: 31
+    shots: 1024
+  }
+
+  conduction_laws {
+    gate_fidelity: 0.9999
+    measurement_noise: 0.0001
+    coherence_time: infinite
+  }
+
+  interface "circuit-api" {
+    protocol: "grpc-sovereign"
+    port: 9000
+  }
+
+  policy "entropy" {
+    threshold: 0.01
+    mitigation: "zero-noise-extrapolation"
+  }
+}
